@@ -6,10 +6,12 @@
 
 > 🛍️ **A curated directory of top SaaS platforms, open-source frameworks, landed cost calculation engines, customs compliance APIs, and global logistics infrastructure for cross-border e-commerce.**
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 [![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Cross-Border-E-Commerce?style=social)](https://github.com/ishandutta2007/Awesome-Cross-Border-E-Commerce/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Cross-Border-E-Commerce/pulls)
 [![Cross-Border E-Commerce Guide](https://img.shields.io/badge/Guide-2026%20Edition-blue.svg)](#sector-overview--market-dynamics)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 ---
 
@@ -21,6 +23,8 @@
   - [🧩 Specialized Cross-Border Plugins & Tooling](#-specialized-cross-border-plugins--tooling)
 - [🛠️ Architectural Guidance & Stack Recipes](#️-architectural-guidance--stack-recipes)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
 - [⚖️ Disclaimer & Compliance Notice](#️-disclaimer--compliance-notice)
 
 ---
@@ -126,6 +130,27 @@ Contributions are warmly welcomed! Help expand this ecosystem map by adding veri
 2. 🌿 Create a descriptive branch (`git checkout -b add-cross-border-tool`).
 3. ✍️ Add the product or repository to `README.md` following the tabular formatting with verifiable pricing, company valuation, and star metrics.
 4. 🚀 Open a Pull Request with a short summary of the addition.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and using **Awesome Cross-Border E-Commerce**! 🌟
+
+If you found this curated ecosystem, landed cost breakdowns, or open-source stack recipes helpful:
+- ⭐ **Star this repository** to help other developers and e-commerce founders discover it.
+- 🍴 **Fork and contribute** tools, plugins, or updates to keep it accurate.
+- 📢 **Share it** with international expansion teams, developers, and tech communities!
+
+☕ **Buy a coffee & sponsor ongoing maintenance:**  
+Support the project directly on GitHub Sponsors:  
+👉 **[Sponsor Dashboard: github.com/sponsors/ishandutta2007](https://github.com/sponsors/ishandutta2007)**
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Cross-Border-E-Commerce&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Cross-Border-E-Commerce&type=date&legend=top-left)
 
 ---
 
