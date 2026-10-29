@@ -1,211 +1,142 @@
-# Awesome-Cross-Border-E-Commerce
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Cross-Border E-Commerce Banner" width="100%">
+</p>
 
-## Top Cross-Border E-commerce Ecosystem
+# 🌐 Awesome Cross-Border E-Commerce [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+> 🛍️ **A curated directory of top SaaS platforms, open-source frameworks, landed cost calculation engines, customs compliance APIs, and global logistics infrastructure for cross-border e-commerce.**
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on International Checkout, Duty Calculation & Self-Hosted Global Store Infrastructure*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Cross-Border E-commerce**. These tools enable merchants to sell internationally by localizing pricing, calculating duties and taxes, offering local payment methods, and navigating customs compliance—removing the friction that prevents global shoppers from completing purchases.
-
-
-
-**Examples** include Shopify Markets, Global-e, Borderfree, Flow Commerce, ESW (eShopWorld), Glopal, Zonos, FlavorCloud, Reach, and Passport Global (the category leaders).
-
-
-
-**Open-source emphasis**: Cross-Border E-commerce is a domain where open-source tooling is **fragmented and largely insufficient for the full cross-border stack**. The strongest active projects are **WooCommerce Customs Fees** (a GPL plugin adding transparent duty calculation to checkout) , **Price Based on Country for WooCommerce** (a free plugin for geolocation-based pricing and multi-currency) , and **Prism** (a Next.js reference implementation for PPP pricing and AI localization) . For landed cost calculation as a service, **POTAL MCP Server** provides an API-backed tool with 240 countries and 257M+ tariff records—but it requires an external API key and is not fully self-contained . **No open-source project replicates the merchant-of-record, guaranteed duty coverage, and fraud protection** of Shopify Markets Pro (powered by Global-e) or the end-to-end localization of Global-e .
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Shopify Markets](https://www.shopify.com/markets)**  
-
-  Shopify's native cross-border toolkit for creating regional markets with localized currencies, domains, languages, and pricing adjustments; handles duties and taxes configuration at checkout, though full merchant-of-record compliance requires Markets Pro .
-
-
-
-- **[Shopify Markets Pro](https://help.shopify.com/en/manual/markets/markets-pro/overview)**  
-
-  Powered by **Global-e** as merchant of record; takes care of local tax registration, duty calculation, international shipping, and fraud management with **guaranteed duty and tax amounts at checkout** (covers customs differences) . Pricing: **6.5% per transaction** (includes payment processing) plus **2.5% currency conversion fee**; no monthly fee, cancel anytime . Not compatible with B2B orders .
-
-
-
-- **[Global-e](https://www.global-e.com/)**  
-
-  Leading end-to-end cross-border solutions provider (NASDAQ: GLBE) and the engine behind Shopify Markets Pro; supports 200+ destinations, 100+ currencies, 150+ local payment methods, 26 languages, local duty/tax calculation, fraud protection, and returns . Net Dollar Retention above 125% since 2018; merchants include Marc Jacobs (130% YoY international revenue increase) and Native Shoes (76% conversion increase) .
-
-
-
-- **[Borderfree](https://www.borderfree.com/)**  
-
-  Cross-border ecommerce solution (now part of Global-e) providing international checkout localization, duty/tax calculation, and shipping for enterprise retailers.
-
-
-
-- **[Flow Commerce](https://www.flow.io/)**  
-
-  Cross-border commerce platform with localization, duty/tax calculation, and international payment methods; focused on mid-market and enterprise merchants.
-
-
-
-- **[ESW (eShopWorld)](https://www.esw.com/)**  
-
-  Direct-to-consumer cross-border ecommerce provider with localized checkout, duty/tax handling, and logistics for global brands.
-
-
-
-- **[Glopal](https://www.glopal.com/)**  
-
-  Cross-border localization platform with translated storefronts, multi-currency pricing, and duty/tax calculation for international shoppers.
-
-
-
-- **[Zonos](https://zonos.com/)**  
-
-  AI-powered cross-border operating system with **HS code classification** (reads product images, predicts country of origin, detects undervalued shipments) , duty/tax calculation, localized checkout (30+ currencies, 15+ languages), fraud protection, and carrier integration . 16+ years of trade data, 200+ supported countries, 200,000+ orders per day. Customers report 70% reduction in customer service complaints after implementation .
-
-
-
-- **[FlavorCloud](https://www.flavorcloud.com/)**  
-
-  Cross-border shipping and compliance platform with duty/tax calculation, HS code classification, and carrier network integration.
-
-
-
-- **[Reach](https://www.reach.com/)**  
-
-  Cross-border payments and localization platform with multi-currency processing and local payment method support.
-
-
-
-- **[Passport Global](https://www.passportglobal.com/)**  
-
-  International shipping and compliance platform with duty/tax calculation, carrier management, and customs documentation.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### WooCommerce Plugins
-
-
-
-- **[WooCommerce Customs Fees](https://github.com/woocommerce/customs-fees-for-woocommerce)**  
-
-  Official WooCommerce plugin (GPL) adding **transparent customs and import fee calculations** to checkout . Creates a rules table for country-level duty and fee configuration; supports **CIF (Cost, Insurance, Freight) calculations** with optional insurance value filters; integrates with multi-currency plugins; caches calculations per session for performance (<50ms average) . **Critical caveat**: fees are for **display transparency only**—actual collection depends on your payment gateway and business model; most merchants show fees but collect separately at customs . Version 1.3.0 (June 2026) updated China-to-US tariff rates after IEEPA tariffs were struck down .
-
-
-
-- **[Price Based on Country for WooCommerce](https://wordpress.org/plugins/woocommerce-product-price-based-on-countries/)**  
-
-  Free WordPress.org plugin (100% free core) for **country-specific pricing and multi-currency** . Features geolocation-based price display, manual fixed prices per country/region or automatic exchange rate conversion, country switcher widget, and multilingual compatibility (WPML, Polylang) . PRO adds automatic exchange rate updates, price rounding ("pretty prices"), and bulk CSV import . **The most practical free foundation for localized pricing** on WooCommerce, though it does not handle duty calculation or customs compliance.
-
-
-
-### Reference Implementations & Demos
-
-
-
-- **[Prism](https://github.com/CoderOtakuX/Prism)**  
-
-  Open-source **"Link-in-Bio" global store** demonstrating automatic language and price adaptation based on visitor location (Next.js 15, Supabase, Lingo.dev, Vercel) . Features **auto-location detection**, **PPP (Purchasing Power Parity) pricing** to adjust affordability by region, and **AI localization** via Lingo.dev for on-the-fly translation without manual JSON files . **A working reference for PPP pricing and AI-driven localization**, but it is a demo store, not a production cross-border platform with duty/tax/customs handling .
-
-
-
-### Landed Cost & Tariff APIs
-
-
-
-- **[POTAL MCP Server](https://socket.dev/npm/package/potal-mcp-server)**  
-
-  MCP server for **landed cost calculation** across 240 countries, with 257M+ tariff records, 131K government tariff schedules, 1.36M product-HS mappings, 63 FTAs, and sanctions screening (21K+ entries) . Tools include `calculate_landed_cost`, `classify_product` (GRI Pipeline, 592 codified rules), `check_restrictions`, `screen_denied_party`, `lookup_fta`, and document generation (Commercial Invoice, Packing List, Certificate of Origin) . **Requires a POTAL API key** (external service)—not fully self-hosted, but provides the most comprehensive tariff data available as an API wrapper .
-
-
-
-- **[mcp-logistics](https://github.com/zavora-ai/mcp-logistics)**  
-
-  Open-source MCP server (Apache-2.0) with 16 tools across ShipEngine, Shippo, and Google Maps backends for **multi-carrier rate comparison, tracking, label generation, address validation, and route optimization** . **Shipping-focused** rather than duty/tax—useful as the fulfillment layer of a cross-border stack, but requires carrier API credentials .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Openfront** — Open-source Shopify alternative (Next.js/KeystoneJS) with **multi-region deployment support**, localized payments, multi-currency pricing, and regional tax/compliance tools . Self-hostable with Stripe/PayPal integrations . **Full e-commerce platform** rather than a cross-border add-on—provides the foundation for building a global store, but duty/tax calculation requires configuration or third-party integration .
-
-- **No mature open-source merchant-of-record equivalent exists** — The legal and tax infrastructure of Global-e or Shopify Markets Pro (tax registration, guaranteed duty coverage, fraud liability) requires banking relationships and regulatory compliance that open-source cannot replicate .
-
-
-
-**Frameworks for building custom systems**: For **WooCommerce stores**, combine **Price Based on Country** for localized pricing  with **Customs Fees** for duty display . For **PPP pricing and AI localization**, **Prism** provides a working reference pattern . For **landed cost calculation as a service**, **POTAL MCP Server** offers the most comprehensive tariff data via API . For **shipping and fulfillment**, **mcp-logistics** provides multi-carrier rate comparison . No open-source project delivers the full merchant-of-record experience—organizations requiring guaranteed duty coverage and tax remittance should evaluate Shopify Markets Pro or Global-e.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Cross-border e-commerce platforms handling international transactions must comply with customs regulations, tax laws (VAT/GST/duty), and data privacy requirements in every jurisdiction of operation; **incorrect duty calculation or customs documentation can result in shipment delays, fines, or seizure**.
-
-- **Open-source cross-border e-commerce is fragmented across pricing, duty display, and shipping layers**—WooCommerce plugins provide localized pricing and duty estimation , Prism demonstrates PPP pricing , and POTAL provides tariff data via API . However, **no open-source project replicates the merchant-of-record, guaranteed duty coverage, and tax remittance** of Shopify Markets Pro or Global-e . Merchants requiring full cross-border compliance should evaluate commercial platforms.
-
-- Verify license terms for commercial use; WooCommerce Customs Fees and Price Based on Country are GPL , Prism is open-source (check repository) , and POTAL MCP Server requires a paid API key .
-
-
+[![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Cross-Border-E-Commerce?style=social)](https://github.com/ishandutta2007/Awesome-Cross-Border-E-Commerce/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Cross-Border-E-Commerce/pulls)
+[![Cross-Border E-Commerce Guide](https://img.shields.io/badge/Guide-2026%20Edition-blue.svg)](#sector-overview--market-dynamics)
 
 ---
 
+## 📑 Table of Contents
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ Top SaaS & Hosted Cross-Border Platforms](#️-top-saas--hosted-cross-border-platforms)
+- [🔓 Open-Source E-Commerce & Customs Frameworks](#-open-source-e-commerce--customs-frameworks)
+  - [⭐ Featured Open-Source Projects (Ranked by GitHub Stars)](#-featured-open-source-projects-ranked-by-github-stars)
+  - [🧩 Specialized Cross-Border Plugins & Tooling](#-specialized-cross-border-plugins--tooling)
+- [🛠️ Architectural Guidance & Stack Recipes](#️-architectural-guidance--stack-recipes)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer & Compliance Notice](#️-disclaimer--compliance-notice)
 
+---
 
-**Made for ecommerce merchants, international expansion teams, and cross-border platform engineers.**  
+## 📊 Sector Overview & Market Dynamics
 
-Let's make cross-border e-commerce more open, but with clear eyes about the merchant-of-record and tax-remittance infrastructure that software alone cannot replace.
+The global cross-border e-commerce market is projected to surpass **$1.2 trillion in core B2C volume by 2026** (with broad cross-border digital trade TAM estimates ranging between **$1.7 trillion and $5 trillion**), expanding at an annualized compound rate of **15% to 18%**. 
+
+The sector is **moderately fragmented**: mega-ecosystems and public category leaders dominate Merchant of Record (MoR) and core platform layers (e.g., Shopify + Global-e), whereas regional carriers, customs brokerages, HS code classification engines, and localized payment gateways remain deeply fragmented across sovereign borders and local regulatory regimes.
+
+---
+
+## ☁️ Top SaaS & Hosted Cross-Border Platforms
+
+These hosted platforms manage international store localization, automated customs clearance, DDP (Delivered Duty Paid) landed cost calculation, and Merchant of Record (MoR) legal liability.
+
+| Platform | Market Size / Valuation / Revenue | Starting Tier Pricing | Free Tier / Trial Limit | Key Capabilities & MoR Support |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Shopify Markets](https://www.shopify.com/markets)** | **~$220B Valuation**<br>*(~$9B+ Annual TTM Rev)* | **$39/mo**<br>*(Included in Shopify Basic; 1.5%–2% currency conversion fee)* | **3-day free trial**<br>*(followed by $1/mo for initial 3 months, full admin access)* | Multi-currency, domain subfolders (`/fr`, `/de`), and localized price adjustments directly within standard Shopify admin. |
+| **[Shopify Markets Pro](https://help.shopify.com/en/manual/markets/markets-pro/overview)** | **~$220B Ecosystem**<br>*(Engine by Global-e)* | **6.5% transaction fee + 2.5% FX fee**<br>*(No monthly base fee; cancel anytime)* | **None (Pay-as-you-transact)**<br>*(Available to eligible US/Shopify merchants with $0 upfront commitment)* | Full Merchant of Record (MoR) powered by Global-e: guaranteed duty/tax at checkout, fraud protection, and remittance. |
+| **[Global-e](https://www.global-e.com/)** | **~$6.5B Valuation**<br>*(NASDAQ: GLBE, ~$1.2B+ ARR)* | **Custom enterprise rate**<br>*(Typically 4%–7% fee per cross-border GMV + FX margin)* | **Custom live sandbox/demo**<br>*(No self-serve free tier; enterprise contract scoping)* | The global leader in MoR infrastructure: 200+ markets, 100+ local currencies, 150+ payment methods, and guaranteed landed cost. |
+| **[Reach](https://www.reach.com/)** | **~$100M–$250M Est. Valuation**<br>*($10M–$30M ARR, VC-backed)* | **2.9% + $0.30 per international transaction**<br>*(Varies based on volume and corridor)* | **Free sandbox account**<br>*(Unlimited test API transactions in test environment)* | Merchant of Record (MoR) platform specializing in local payment acquiring, reducing cross-border FX fees, and chargeback coverage. |
+| **[Zonos](https://zonos.com/)** | **~$100M–$200M Est. Valuation**<br>*(Moffat, $10M–$25M ARR)* | **$0/mo base**<br>*(Pay-as-you-ship: $2/order + 10% duty guarantee fee, or ~$2,000 setup)* | **Dashboard Lite: Free forever**<br>*(Free HS lookup & duty estimator via partner postal links)* | AI-powered HS code classification, landed cost calculation engine, and DDP guarantees across 200+ destination jurisdictions. |
+| **[Passport Global](https://passportglobal.com/)** | **~$100M–$150M Est. Valuation**<br>*(Series B, $15M–$30M ARR)* | **Volume-based carrier rates**<br>*(Custom rate card based on package weight/corridor)* | **Free logistics consultation**<br>*(Demo test environment provided upon sales onboarding)* | End-to-end DTC cross-border shipping, automated DDP checkout landed cost calculation, and customs clearance handling. |
+| **[FlavorCloud](https://www.flavorcloud.com/)** | **~$60M–$100M Est. Valuation**<br>*(Series A, $8M–$20M ARR)* | **Pay-per-shipment transaction fee**<br>*(Embedded into discounted international carrier rates)* | **Free onboarding consultation**<br>*(Standard demo sandbox access upon scheduled setup)* | Automated DDP logistics, algorithmic routing across 300+ global carriers, and customs classification engine. |
+| **[Glopal](https://www.glopal.com/)** | **~$30M–$60M Est. Valuation**<br>*(European VC, $5M–$15M ARR)* | **$99/month + % of international GMV**<br>*(Professional multi-store tier)* | **Free / Starter plan ($0/mo)**<br>*(Basic localized international checkout & currency switch)* | International search marketing, localized Google Shopping ads, translation, and localized multi-currency checkout. |
+| **[Flow Commerce](https://www.flow.io/)** | **Subsidiary of Global-e**<br>*(Acquired for ~$500M in 2022)* | **Custom enterprise volume pricing**<br>*(Modular API integration tier)* | **Sandbox test access**<br>*(Provided during enterprise integration onboarding)* | API-first international localization engine for enterprise merchants, managing localized catalog pricing, tax, and duty. |
+| **[Borderfree](https://www.borderfree.com/)** | **Subsidiary of Global-e**<br>*(Acquired from Pitney Bowes)* | **Enterprise commission per order**<br>*(Tiered by GMV & logistics routing)* | **Contracted pilot phase**<br>*(Enterprise pilot program negotiated per brand)* | Heritage enterprise cross-border solution providing localized shopping, global logistics, and customs clearance. |
+
+---
+
+## 🔓 Open-Source E-Commerce & Customs Frameworks
+
+Unlike hosted SaaS platforms that act as legal Merchants of Record, open-source solutions empower engineering teams to build and host multi-currency, multi-region stores while integrating sovereign duty APIs.
+
+### ⭐ Featured Open-Source Projects (Ranked by GitHub Stars)
+
+| Repository & Stars Badge | License | Stack | Cross-Border & Internationalization Capabilities |
+| :--- | :---: | :---: | :--- |
+| **[medusajs/medusa](https://github.com/medusajs/medusa)**<br>[![GitHub stars](https://img.shields.io/github/stars/medusajs/medusa?style=social&color=white)](https://github.com/medusajs/medusa/stargazers) | `MIT` | Node.js / TypeScript | Headless e-commerce platform with native multi-region architecture: granular currency controls, region-based tax rates, multiple fulfillment providers, and localized pricing tiers per market. |
+| **[bagisto/bagisto](https://github.com/bagisto/bagisto)**<br>[![GitHub stars](https://img.shields.io/github/stars/bagisto/bagisto?style=social&color=white)](https://github.com/bagisto/bagisto/stargazers) | `MIT` | PHP / Laravel | Enterprise modular e-commerce system featuring multi-currency, multi-channel inventory, multilingual storefronts, and customizable localized tax calculation schemes out-of-the-box. |
+| **[saleor/saleor](https://github.com/saleor/saleor)**<br>[![GitHub stars](https://img.shields.io/github/stars/saleor/saleor?style=social&color=white)](https://github.com/saleor/saleor/stargazers) | `BSD-3-Clause` | Python / GraphQL / React | High-performance composable commerce engine with native multi-channel and multi-currency capabilities, allowing merchants to customize price books, shipping zones, and regional tax plugins per country. |
+| **[spree/spree](https://github.com/spree/spree)**<br>[![GitHub stars](https://img.shields.io/github/stars/spree/spree?style=social&color=white)](https://github.com/spree/spree/stargazers) | `BSD-3-Clause` | Ruby on Rails | Proven headless commerce platform with multi-store, multi-currency, and internationalized shipping calculation architecture suitable for global enterprise deployments. |
+| **[woocommerce/woocommerce](https://github.com/woocommerce/woocommerce)**<br>[![GitHub stars](https://img.shields.io/github/stars/woocommerce/woocommerce?style=social&color=white)](https://github.com/woocommerce/woocommerce/stargazers) | `GPL-3.0` | PHP / WordPress | The world's most widely adopted open-source commerce platform. Backs hundreds of international cross-border extensions for geo-pricing, tax zones, and global carrier integrations. |
+| **[Sylius/Sylius](https://github.com/Sylius/Sylius)**<br>[![GitHub stars](https://img.shields.io/github/stars/Sylius/Sylius?style=social&color=white)](https://github.com/Sylius/Sylius/stargazers) | `MIT` | PHP / Symfony | Modern modular commerce framework built on Symfony components; supports custom exchange rates, zone-specific taxes, multi-locale translations, and tailored shipping calculations per destination country. |
+| **[solidusio/solidus](https://github.com/solidusio/solidus)**<br>[![GitHub stars](https://img.shields.io/github/stars/solidusio/solidus?style=social&color=white)](https://github.com/solidusio/solidus/stargazers) | `BSD-3-Clause` | Ruby on Rails | Battle-tested, fork-friendly commerce framework emphasizing complex international logistics, multiple payment gateways, and customizable regional tax rules. |
+| **[marian-kadanka/woocommerce-product-price-based-on-countries](https://github.com/marian-kadanka/woocommerce-product-price-based-on-countries)**<br>[![GitHub stars](https://img.shields.io/github/stars/marian-kadanka/woocommerce-product-price-based-on-countries?style=social&color=white)](https://github.com/marian-kadanka/woocommerce-product-price-based-on-countries/stargazers) | `GPL-2.0` | PHP / WordPress | Community-maintained implementation of Price Based on Country for WooCommerce, adding geolocation-based price switches, manual country price overrides, and multi-currency rendering. |
+| **[woocommerce/customs-fees-for-woocommerce](https://github.com/woocommerce/customs-fees-for-woocommerce)**<br>[![GitHub stars](https://img.shields.io/github/stars/woocommerce/customs-fees-for-woocommerce?style=social&color=white)](https://github.com/woocommerce/customs-fees-for-woocommerce/stargazers) | `GPL-3.0` | PHP / WordPress | Official WooCommerce extension displaying estimated customs, tariffs, and import charges at checkout based on CIF (Cost, Insurance, Freight) calculations per target destination. |
+| **[zavora-ai/mcp-logistics](https://github.com/zavora-ai/mcp-logistics)**<br>[![GitHub stars](https://img.shields.io/github/stars/zavora-ai/mcp-logistics?style=social&color=white)](https://github.com/zavora-ai/mcp-logistics/stargazers) | `Apache-2.0` | TypeScript / MCP | Model Context Protocol server exposing 16 logistics tools across ShipEngine and Shippo for multi-carrier cross-border shipping comparison, tracking, and label generation. |
+| **[CoderOtakuX/Prism](https://github.com/CoderOtakuX/Prism)**<br>[![GitHub stars](https://img.shields.io/github/stars/CoderOtakuX/Prism?style=social&color=white)](https://github.com/CoderOtakuX/Prism/stargazers) | `MIT` | Next.js / TypeScript | Open-source global link-in-bio storefront demonstrating automated location detection, Purchasing Power Parity (PPP) localized pricing adjustments, and dynamic AI localization. |
+
+---
+
+### 🧩 Specialized Cross-Border Plugins & Tooling
+
+- **[POTAL MCP Server](https://socket.dev/npm/package/potal-mcp-server)** 📦 — Model Context Protocol wrapper for global landed cost estimation across 240+ countries. Codifies 257M+ tariff schedules, 592 General Rules of Interpretation (GRI), and provides denied-party screening tools (requires POTAL API key).
+- **[Openfront](https://openfront.io/)** 🛒 — Open-source headless storefront built with Next.js and KeystoneJS, engineered specifically for multi-region catalog deployment, localized currencies, and Stripe multi-region payment flows.
+
+---
+
+## 🛠️ Architectural Guidance & Stack Recipes
+
+When designing a production cross-border e-commerce tech stack, choose the architecture suited to your operational scale and tax nexus:
+
+```mermaid
+flowchart TD
+    A[Global Shopper Visits Store] --> B{Choose Operating Model}
+    
+    B -->|Merchant of Record MoR| C[SaaS: Shopify Markets Pro / Global-e]
+    C --> C1[Guaranteed DDP Duty Collection]
+    C --> C2[Full Tax Remittance & Legal Liability Handled]
+    C --> C3[Local Payment Methods & Anti-Fraud]
+    
+    B -->|Self-Hosted / Hybrid Custom Stack| D[Open-Source Core: Medusa / Saleor / WooCommerce]
+    D --> E[Geo-Pricing Layer: Price Based on Country / Prism PPP]
+    D --> F[Landed Cost & Duty API: Zonos / POTAL MCP]
+    D --> G[Global Logistics & Labels: mcp-logistics / FlavorCloud]
+    
+    style C fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    style D fill:#1e293b,stroke:#a855f7,stroke-width:2px,color:#f8fafc
+    style A fill:#0f172a,stroke:#34d399,stroke-width:2px,color:#f8fafc
+```
+
+### 💡 Suggested Composable Configurations
+
+1. **Self-Hosted Headless Stack (Modern)**: 
+   - Core: [Medusa](https://github.com/medusajs/medusa) or [Saleor](https://github.com/saleor/saleor)
+   - Landed Cost Engine: [Zonos API](https://zonos.com/) or [POTAL MCP](https://socket.dev/npm/package/potal-mcp-server)
+   - Fulfillment: [mcp-logistics](https://github.com/zavora-ai/mcp-logistics) connected to ShipEngine
+2. **WordPress / WooCommerce Native Stack (Cost-Effective)**:
+   - Currency & Pricing: [Price Based on Country](https://github.com/marian-kadanka/woocommerce-product-price-based-on-countries)
+   - Transparent Import Fees: [WooCommerce Customs Fees](https://github.com/woocommerce/customs-fees-for-woocommerce)
+3. **Turnkey Enterprise (Zero Tax Nexus Liability)**:
+   - Platform: [Shopify Markets Pro](https://help.shopify.com/en/manual/markets/markets-pro/overview) or [Global-e](https://www.global-e.com/)
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are warmly welcomed! Help expand this ecosystem map by adding verified platforms, open-source libraries, or developer tools:
+
+1. 🍴 Fork the repository.
+2. 🌿 Create a descriptive branch (`git checkout -b add-cross-border-tool`).
+3. ✍️ Add the product or repository to `README.md` following the tabular formatting with verifiable pricing, company valuation, and star metrics.
+4. 🚀 Open a Pull Request with a short summary of the addition.
+
+---
+
+## ⚖️ Disclaimer & Compliance Notice
+
+- *This repository is community-curated for informational and architectural purposes.*
+- *Cross-border commerce entails rigorous tax laws (VAT, GST, IOSS, de minimis thresholds) and customs documentation requirements. Incorrect HS code classification or under-declaring import values can result in customs border penalties, delays, or shipment confiscation.*
+- *Ensure you verify commercial licenses and developer terms before deploying open-source or proprietary APIs.*
+
+---
+
+<p align="center">
+  <sub>Maintained by <a href="https://github.com/ishandutta2007">ishandutta2007</a> and the global e-commerce open-source community.</sub>
+</p>

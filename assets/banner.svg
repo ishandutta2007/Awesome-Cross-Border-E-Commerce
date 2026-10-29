@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#0b0f19; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-radius:12px; overflow:hidden;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-light" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .globe-spin {
+      transform-origin: 1040px 180px;
+      animation: spin 35s linear infinite;
+    }
+    .flow-line {
+      stroke-dasharray: 8 12;
+      animation: flowDash 3s linear infinite;
+    }
+    .flow-line-rev {
+      stroke-dasharray: 6 10;
+      animation: flowDashRev 4s linear infinite;
+    }
+    .pulse-node {
+      animation: pulse 2.5s ease-in-out infinite alternate;
+    }
+    .float-badge {
+      animation: float 4s ease-in-out infinite alternate;
+    }
+    .float-badge-delayed {
+      animation: float 4.5s ease-in-out 1.5s infinite alternate;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes flowDash {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -40; }
+    }
+    @keyframes flowDashRev {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 32; }
+    }
+    @keyframes pulse {
+      0% { r: 4px; opacity: 0.5; }
+      50% { r: 6.5px; opacity: 1; }
+      100% { r: 4px; opacity: 0.5; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-7px); }
+    }
+  </style>
+
+  <!-- Deep Background Rect -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.07" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Curved Global Trade Flow Lines (Background) -->
+  <g opacity="0.35">
+    <path d="M 680 320 C 800 280, 900 120, 1080 150" fill="none" stroke="#38bdf8" stroke-width="2" class="flow-line" />
+    <path d="M 720 40 C 850 90, 960 250, 1140 220" fill="none" stroke="#818cf8" stroke-width="2" class="flow-line-rev" />
+    <path d="M 620 220 C 780 160, 920 310, 1040 180" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4 8" />
+  </g>
+
+  <!-- Spinning Wireframe Earth Graphic (Right Side) -->
+  <g class="globe-spin" opacity="0.28">
+    <circle cx="1040" cy="180" r="140" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="5 5" />
+    <ellipse cx="1040" cy="180" rx="140" ry="55" fill="none" stroke="#818cf8" stroke-width="1.2" />
+    <ellipse cx="1040" cy="180" rx="140" ry="110" fill="none" stroke="#818cf8" stroke-width="1.2" />
+    <ellipse cx="1040" cy="180" rx="55" ry="140" fill="none" stroke="#38bdf8" stroke-width="1.2" />
+    <ellipse cx="1040" cy="180" rx="110" ry="140" fill="none" stroke="#38bdf8" stroke-width="1.2" />
+    <line x1="900" y1="180" x2="1180" y2="180" stroke="#c084fc" stroke-width="1.5" />
+    <line x1="1040" y1="40" x2="1040" y2="320" stroke="#c084fc" stroke-width="1.5" />
+  </g>
+
+  <!-- Glowing Nodes around Trade Routes -->
+  <g filter="url(#glow-light)">
+    <circle cx="820" cy="220" r="5" fill="#38bdf8" class="pulse-node" />
+    <circle cx="950" cy="130" r="4" fill="#a78bfa" class="pulse-node" style="animation-delay: 0.8s;" />
+    <circle cx="1080" cy="270" r="5" fill="#34d399" class="pulse-node" style="animation-delay: 1.6s;" />
+  </g>
+
+  <!-- Foreground Content: Header & Category Pills (Kept strictly crisp and visible in foreground) -->
+  <g transform="translate(70, 0)">
+    <!-- Category Mini-Badge -->
+    <g transform="translate(0, 52)">
+      <rect width="215" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" opacity="0.9" />
+      <circle cx="14" cy="14" r="4" fill="#38bdf8" />
+      <text x="26" y="18" fill="#94a3b8" font-size="11" font-weight="600" letter-spacing="1.2">CURATED ECOSYSTEM 2026</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="130" fill="url(#textGrad)" font-size="44" font-weight="800" letter-spacing="-0.5" filter="url(#glow-light)">
+      Awesome Cross-Border E-Commerce
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="168" fill="#94a3b8" font-size="17" font-weight="400">
+      Global Merchant Infrastructure • Landed Cost Engines • Multi-Currency • International Logistics
+    </text>
+
+    <!-- Feature Pills / Badges in Foreground -->
+    <g transform="translate(0, 215)">
+      <!-- Pill 1: Landed Cost & Duties -->
+      <g class="float-badge">
+        <rect width="180" height="42" rx="10" fill="#111827" stroke="#38bdf8" stroke-width="1.2" opacity="0.95" />
+        <text x="18" y="26" fill="#38bdf8" font-size="13" font-weight="700">🛃 Landed Cost &amp; Tax</text>
+      </g>
+
+      <!-- Pill 2: Merchant of Record -->
+      <g transform="translate(195, 0)" class="float-badge-delayed">
+        <rect width="190" height="42" rx="10" fill="#111827" stroke="#818cf8" stroke-width="1.2" opacity="0.95" />
+        <text x="18" y="26" fill="#a5b4fc" font-size="13" font-weight="700">💳 Merchant of Record</text>
+      </g>
+
+      <!-- Pill 3: Global Logistics -->
+      <g transform="translate(400, 0)" class="float-badge">
+        <rect width="185" height="42" rx="10" fill="#111827" stroke="#c084fc" stroke-width="1.2" opacity="0.95" />
+        <text x="18" y="26" fill="#e879f9" font-size="13" font-weight="700">🌐 Global Fulfillment</text>
+      </g>
+
+      <!-- Pill 4: Open Source Stacks -->
+      <g transform="translate(600, 0)" class="float-badge-delayed">
+        <rect width="185" height="42" rx="10" fill="#111827" stroke="#34d399" stroke-width="1.2" opacity="0.95" />
+        <text x="18" y="26" fill="#34d399" font-size="13" font-weight="700">⚡ Open-Source Stacks</text>
+      </g>
+    </g>
+
+    <!-- Lower Meta Specs Line -->
+    <g transform="translate(0, 298)">
+      <text x="0" y="0" fill="#64748b" font-size="13" font-weight="500">
+        🚀 Complete guide covering Shopify Markets, Global-e, Medusa, Saleor, Zonos, Bagisto &amp; Customs APIs
+      </text>
+    </g>
+  </g>
+</svg>
